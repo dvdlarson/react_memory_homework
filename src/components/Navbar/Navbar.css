@@ -1,0 +1,35 @@
+
+.navbar {
+    background: #4f6a7a;
+    box-shadow: 0 3px 6px rgb(15, 5, 5), 0 3px 6px, rgb(15, 5, 5);
+  }
+
+  li {
+    color: ghostwhite;
+    padding: 15px 0;
+  }
+
+.navbar li {
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .item-left {
+    width: 15%;
+  }
+  
+  .item-center {
+      width: 70%;
+  }
+  
+  .item-right {
+    width: 15%;
+  }
+  
+
+  
+  
+  
+  body {
+    font-size: 24px;
+  }
