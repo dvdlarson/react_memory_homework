@@ -1,50 +1,50 @@
 [
     {
       "id": 1,
-      "image": "fish1.png"
+      "image": "./images/fish1.png"
     },
     {
       "id": 2,
-      "image": "fish2.png"   
+      "image": "./images/fish2.png"   
     },
     {
       "id": 3,
-      "image": "fish3.png"
+      "image": "./images/fish3.png"
     },
     {
       "id": 4,
-      "image": "fish4.png" 
+      "image": "./images/fish4.png" 
     },
     {
       "id": 5,
-      "image": "fish5.png"
+      "image": "./images/fish5.png"
     },
     {
       "id": 6,
-      "image": "fish6.png"
+      "image": "./images/fish6.png"
     },
     {
       "id": 7,
-      "image": "fish7.png"
+      "image": "./images/fish7.png"
     },
     {
       "id": 8,
-      "image": "fish8.png"
+      "image": "./images/fish8.png"
     },
     {
       "id": 9,
-      "image": "fish9.png"
+      "image": "./images/fish9.png"
     },
     {
       "id": 10,
-      "image": "fish10.png"
+      "image": "./images/fish10.png"
     },
     {
       "id": 11,
-      "image": "fish11.png"
+      "image": "./images/fish11.png"
     },
     {
       "id": 12,
-      "image": "fish12.png"
+      "image": "./images/fish12.png"
     }
   ]

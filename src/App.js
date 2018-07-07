@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 import Card from "./components/Card";
-import Footer from "./components/Footer";
-import fishData from "./fish.json";
+//import Footer from "./components/Footer";
+import fishData from "./fishList.json";
 
 import './App.css';
 
@@ -16,7 +16,7 @@ class App extends Component {
   };
 
   //handle clicking on a card event
-    imageClick = event => {
+    cardClick = event => {
       const clickedFish= event.target.alt;
       //check if the clickedFish has an index in the clickedItems array
       const alreadyClicked = this.state.clickedItems.indexOf(clickedFish) > -1;
@@ -25,7 +25,7 @@ class App extends Component {
 
       if (alreadyClicked) {
         this.setState({
-          fishList:this.state.fishList.sort(function(a,b){
+          fishData:this.state.fishData.sort(function(a,b){
             return 0.5 - Math.random();
           }),
           clickedItems:[],
@@ -37,7 +37,7 @@ class App extends Component {
 // not already clicked
       else {
             this.setState({
-              fishList:this.state.fishList.sort(function(a,b){
+              fishData:this.state.fishData.sort(function(a,b){
                 return 0.5 - Math.random();
               }),
               clickedItems : this.state.clickedItems.concat(clickedFish),
@@ -47,7 +47,7 @@ class App extends Component {
                 if (this.state.score === 12) {
                   alert ("You Win");
                   this.setState({
-                    fishList:this.state.fishList.sort(function(a,b){
+                    fishData:this.state.fishData.sort(function(a,b){
                       return 0.5 - Math.random();
                     }),
                     clickedItems:[],
@@ -60,6 +60,7 @@ class App extends Component {
     }
 
   render() {
+    console.log("fishdata array: "+this.state.fishData);
     return (
       <div>
             <Navbar
@@ -67,15 +68,15 @@ class App extends Component {
             />
             <Jumbotron />
             <div className="wrapper">
-              {this.state.fishList.map(fish => (
-                <Card imageClick={this.imageClick}
+              {this.state.fishData.map(item => (
+                <Card cardClick={this.cardClick}
                 id={fishData.id}
                 key={fishData.id}
                 image={fishData.image}
                 />
               ))}
             </div>
-            <Footer />
+            {/* <Footer /> */}
       </div>
     );
   }
