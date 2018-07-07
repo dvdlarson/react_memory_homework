@@ -24,6 +24,7 @@ class App extends Component {
 // already Clicked: randomize fishList, set score to 0 and alert the player
 
       if (alreadyClicked) {
+        console.log('already clicked: '+alreadyClicked);
         this.setState({
           fishData:this.state.fishData.sort(function(a,b){
             return 0.5 - Math.random();
@@ -60,7 +61,7 @@ class App extends Component {
     }
 
   render() {
-    console.log("fishdata array: "+this.state.fishData);
+    console.dir(this.state.fishData);
     return (
       <div>
             <Navbar
@@ -68,11 +69,12 @@ class App extends Component {
             />
             <Jumbotron />
             <div className="wrapper">
-              {this.state.fishData.map(item => (
-                <Card cardClick={this.cardClick}
-                id={fishData.id}
-                key={fishData.id}
-                image={fishData.image}
+              {this.state.fishData.map(fishData => (
+                <Card 
+                cardClick={this.cardClick} 
+                id={fishData.id} 
+                key={fishData.id} 
+                image={fishData.image} 
                 />
               ))}
             </div>
