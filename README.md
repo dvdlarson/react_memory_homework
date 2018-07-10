@@ -8,6 +8,8 @@
 <li>If you click an image twice, the game is over.</li>
 </ul>
 
+<h3>Play the game <a href="https://dvdlarson.github.io/react_memory_homework/">here</>.</h3>
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
